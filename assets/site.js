@@ -26,7 +26,10 @@
   const updateLanguageLinks = () => {
     document.querySelectorAll('.language-link').forEach(link => {
       const destination = new URL(link.href);
+      const version = destination.searchParams.get('v');
       destination.search = location.search;
+      // Preserve the target build, even when the current URL has an older v.
+      if (version) destination.searchParams.set('v', version);
       destination.hash = location.hash;
       link.href = destination.href;
     });

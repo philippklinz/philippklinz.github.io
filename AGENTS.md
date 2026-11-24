@@ -8,6 +8,7 @@
 - Keep the header's three manually selected panels (profile, books, interests) with the fixed CSS-greyscale portrait. Preserve the selected panel on language changes, support keyboard navigation, and show all content without JavaScript. Do not add automatic rotation.
 - The confirmed Heisenberg book is **Quantentheorie und Philosophie**, Reclam, ISBN 978-3-15-009948-3.
 - Edit language catalogues and the shared template in `tools/generate.mjs`, then regenerate the checked-in pages. Keep translations aligned and record source revisions only after reconciling content changes.
+- Edit `assets/site.css`, `assets/site.js` and `assets/theme.js` as sources, then regenerate their content-hashed published copies. Keep older hashed copies for cached pages. Preserve the target page version when updating language links.
 - Keep direct relative links, correct `lang` attributes, translated accessible labels, keyboard focus, reduced-motion support and readable narrow layouts. Core content and language choice must work without JavaScript.
 - Validate with the commands in README. Inspect visual changes in a browser when available. Preserve the original portrait file; do not claim it is GPL-licensed.
 - Publish to `main` in this repository when requested. Do not publish this website into one of the laboratory repositories. Custom-domain activation is a separate hosting/DNS step.

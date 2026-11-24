@@ -5,6 +5,16 @@ import { languages } from './languages.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const checkOnly = process.argv.includes('--check');
+const hash = content => createHash('sha256').update(content).digest('hex').slice(0, 16);
+// Keep each published asset filename immutable so cached HTML stays compatible.
+const assetFiles = ['assets/site.css', 'assets/site.js', 'assets/theme.js'];
+const versionedAssets = {};
+for (const path of assetFiles) {
+  const content = await readFile(root + path, 'utf8');
+  const versionedPath = path.replace(/\.(css|js)$/, `.${hash(content)}.$1`);
+  versionedAssets[path] = versionedPath;
+  await output(versionedPath, content);
+}
 const config = JSON.parse(await readFile(root + 'site.config.json', 'utf8'));
 const baseURL = config.siteURL.replace(/\/$/, '') + '/';
 const source = JSON.parse(await readFile(root + 'locales/en.json', 'utf8'));
@@ -28,6 +38,7 @@ for (const [lang] of languages) {
   if (messages.skills.groups.length !== 10) throw new Error(`${lang}: expected ten approved skills groups`);
   catalogue[lang] = messages;
 }
+const pageVersion = hash(JSON.stringify({ config, catalogue, versionedAssets }) + await readFile(fileURLToPath(import.meta.url), 'utf8'));
 const route = lang => lang === 'en' ? 'index.html' : `${lang}/index.html`;
 const icon = (paths, cls = '') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
 const icons = [
@@ -66,17 +77,17 @@ ${languages.map(([tag]) => `<link rel="alternate" hreflang="${tag}" href="${esc(
 <meta property="og:image" content="${esc(baseURL + 'assets/philipp-klinz.jpg')}">
 <meta property="og:image:alt" content="${esc(t.ui.portrait)}">`}
 <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
-<script src="${prefix}assets/theme.js"></script>
+<script src="${prefix + versionedAssets['assets/theme.js']}"></script>
 <link rel="preload" href="${prefix}assets/fonts/LiberationSansWeb-Regular.latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${prefix}assets/fonts/LiberationSansWeb-Bold.latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${prefix}assets/fonts/fonts.css">
 <link rel="stylesheet" href="${prefix}assets/modern-objectivity.css">
-<link rel="stylesheet" href="${prefix}assets/site.css">`;
+<link rel="stylesheet" href="${prefix + versionedAssets['assets/site.css']}">`;
 }
 function page(lang, nativeName) {
   const t = catalogue[lang];
   const prefix = lang === 'en' ? './' : '../';
-  const languageLinks = languages.map(([tag, name]) => `<a class="language-link" href="${prefix + route(tag)}" lang="${tag}" hreflang="${tag}"${tag === lang ? ' aria-current="page"' : ''}>${esc(name)}</a>`).join('\n');
+  const languageLinks = languages.map(([tag, name]) => `<a class="language-link" href="${prefix + route(tag)}?v=${pageVersion}" lang="${tag}" hreflang="${tag}"${tag === lang ? ' aria-current="page"' : ''}>${esc(name)}</a>`).join('\n');
   return `<!doctype html>
 <html lang="${lang}">
 <head>${head(lang, t, prefix)}</head>
@@ -111,7 +122,7 @@ function page(lang, nativeName) {
   </section>
 </main>
 <footer class="container footer"><p><a href="https://philippklinz.github.io/modern-objectivity-style/?lang=${lang}">${esc(t.ui.design)}</a></p><nav class="footer-links" aria-label="${esc(t.ui.navigation)}"><a href="#top">${esc(t.ui.top)}</a></nav></footer>
-<script src="${prefix}assets/site.js" defer></script>
+<script src="${prefix + versionedAssets['assets/site.js']}" defer></script>
 </body>
 </html>
 `;

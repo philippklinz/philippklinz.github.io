@@ -28,6 +28,8 @@ python3 tools/check_html.py
 
 `tools/generate.mjs` maintains the three pages, a multilingual error page and the sitemap from one shared template. It checks message coverage, empty values and source freshness before generating anything. The source hash is SHA-256 of `JSON.stringify()` of the parsed English catalogue. Coverage checks establish structural completeness, not native-speaker validation.
 
+The generator also publishes content-hashed copies of the site CSS and JavaScript. Keep previously published copies: cached pages still refer to them. Language links carry a shared content version so switching languages after an update requests the matching page release. Canonical URLs stay clean; the selected slide and section survive the switch.
+
 ## Publish
 
 Repository: [philippklinz/philippklinz.github.io](https://github.com/philippklinz/philippklinz.github.io).

@@ -58,7 +58,7 @@ button, summary, a { touch-action: manipulation; }
 .eyebrow { display: block; margin: 0 0 1rem; color: var(--mo-muted); font: .875rem/1.5 var(--mo-mono); text-transform: uppercase; letter-spacing: .14em; }
 .eyebrow::before { content: '/ '; color: var(--mo-accent); }
 .section h2 { font-size: clamp(2rem, 3vw, 3rem); margin: 0; letter-spacing: -.035em; }
-.section-head p { margin: 0; color: var(--mo-muted); max-width: 56ch; }
+.section-head p { margin: 0; color: var(--mo-muted); max-width: 56ch; text-align: right; justify-self: end; }
 .heading-rule { display: block; height: 2px; width: 3.5rem; margin-top: 1.75rem; background: var(--mo-accent); }
 .skills-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 3.5rem 2rem; }
 .skill { min-width: 0; }
