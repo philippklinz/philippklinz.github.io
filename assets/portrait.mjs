@@ -36,10 +36,11 @@ export function portraitSurface(x, y) {
   const head = Math.max(face, neck) * edge;
   const body = smooth(-.012, .035, insideDistance(x, y, bodyOutline))
     * smooth(.47, .68, y) * edge;
-  // A continuous depth floor keeps the ear from staying behind while the face turns.
+  // Smooth facial curvature makes the nose turn relative to the cheeks and ears.
+  // Keep the padded contour continuous so the silhouette does not pinch.
   const round = Math.exp(-1.2 * (((x - .67) / .25) ** 2 + ((y - .30) / .34) ** 2));
   const nose = Math.exp(-(((x - .613) / .055) ** 2 + ((y - .355) / .07) ** 2));
-  return { head, body, depth: head * (.110 + .055 * round + .045 * nose) };
+  return { head, body, depth: head * (.070 + .150 * round + .060 * nose) };
 }
 
 // 4.6 seconds of motion, then 3.4 seconds of stillness. Every movement returns exactly home.
@@ -58,7 +59,7 @@ export function portraitPose(time) {
   return {
     yaw: .084 * gesture * direction,
     pitch: -.032 * gesture,
-    roll: -.018 * gesture * direction,
+    roll: -.036 * gesture * direction,
     breath: .0080 * Math.sin(Math.PI * phase) ** 2,
     moving: true, wait: 0
   };
@@ -103,7 +104,8 @@ export async function createLivingPortrait(figure, { autoplay = true, remember =
       varying vec2 imageUV;
       void main() {
         imageUV = uv;
-        vec3 pivot = vec3(.175, -.215, 0.0);
+        // Rotate within the head volume, not around the flat photograph behind it.
+        vec3 pivot = vec3(.175, .060, .120);
         vec3 p = position - pivot;
         float cy = cos(pose.x), sy = sin(pose.x);
         float cp = cos(pose.y), sp = sin(pose.y);
