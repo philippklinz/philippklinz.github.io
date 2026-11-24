@@ -86,7 +86,6 @@ function page(lang, nativeName) {
   <div class="container header-inner">
     <a class="brand" href="#top" aria-label="Philipp Klinz"><span class="brand-mark" aria-hidden="true">PK</span><span class="brand-name">philipp-klinz.net</span></a>
     <div class="header-tools">
-      <nav class="primary-nav" aria-label="${esc(t.ui.navigation)}"><a href="#skills">${esc(t.ui.skills)}</a><a href="#books">${esc(t.ui.books)}</a></nav>
       <div class="utility">
         <button id="theme" class="icon-button" type="button" aria-label="${esc(t.ui.dark)}" title="${esc(t.ui.dark)}" aria-pressed="false" hidden>${moon}</button>
         <details class="languages"><summary aria-label="${esc(t.ui.language)}: ${esc(nativeName)}">${globe}<span lang="${lang}">${esc(nativeName)}</span><span class="chevron" aria-hidden="true"></span></summary><nav class="language-options" aria-label="${esc(t.ui.language)}">${languageLinks}</nav></details>

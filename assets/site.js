@@ -100,10 +100,6 @@
     });
     selectSlide(slideFromURL());
     hero.classList.add('is-enhanced');
-    // Open the books panel before the normal anchor navigation scrolls to it.
-    document.querySelectorAll('a[href="#books"]:not([data-slide])').forEach(link => {
-      link.addEventListener('click', () => selectSlide('books', true));
-    });
     const restoreSlide = () => selectSlide(slideFromURL());
     window.addEventListener('hashchange', restoreSlide);
     window.addEventListener('popstate', restoreSlide);
