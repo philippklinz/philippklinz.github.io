@@ -7,13 +7,13 @@
     {"title": "Architektura systemów", "items": ["Projektowanie systemów", "Architektura infrastruktury", "Integracja i interfejsy", "Skalowalność i wysoka dostępność", "Doradztwo techniczne"]},
     {"title": "Infrastruktura i DevOps", "items": ["Linux", "Proxmox i wirtualizacja", "Automatyzacja w Bashu i Pythonie", "Monitorowanie i alerty", "Wdrażanie i utrzymanie", "Kopie zapasowe i odtwarzanie po awarii"]},
     {"title": "Infrastruktura serwerowa", "items": ["Planowanie i wymagania", "Dobór i zakup sprzętu", "Montaż i instalacja", "Konfiguracja i integracja", "Konserwacja i rozbudowa"]},
-    {"title": "Inżynieria oprogramowania", "items": ["PHP", "Python", "JavaScript", "Bash", "HTML i CSS", "API i systemy backendowe"]},
-    {"title": "Bazy danych i inżynieria danych", "items": ["PostgreSQL", "MySQL", "MariaDB", "Projektowanie i administracja bazami danych", "Import i przetwarzanie danych", "ETL i transformacja danych"]},
+    {"title": "Inżynieria oprogramowania", "items": ["PHP", "Python", "Bash", "HTML / CSS / JS", "VHDL"]},
+    {"title": "Bazy danych i inżynieria danych", "items": ["PostgreSQL", "MariaDB / MySQL", "Projektowanie i administracja bazami danych", "Import i przetwarzanie danych", "ETL i transformacja danych"]},
     {"title": "Analiza danych i statystyka", "items": ["Analiza danych", "Analiza statystyczna", "Interpretacja danych", "Czyszczenie i transformacja danych", "Raportowanie i wizualizacja", "Analizy z użyciem SQL i Pythona"]},
     {"title": "Inżynieria aplikacji internetowych", "items": ["Aplikacje internetowe", "Systemy backendowe", "Integracja frontendu", "API REST", "Optymalizacja wydajności"]},
     {"title": "Technologie poczty elektronicznej", "items": ["Rozwiązania do wysyłki e-maili", "Szablony wiadomości HTML", "Zgodność z programami pocztowymi", "Dostarczalność i optymalizacja", "Infrastruktura e-mail marketingu"]},
     {"title": "Technologie marketingu cyfrowego", "items": ["SEO", "E-mail marketing", "Realizacja kampanii", "Projekty dla agencji i klientów", "Śledzenie i analiza"]},
-    {"title": "Pośrednictwo w obrocie danymi i bazami adresowymi", "items": ["10 lat doświadczenia zawodowego", "Marketing oparty na danych", "Pozyskiwanie i przetwarzanie baz adresowych", "Segmentacja i dobór grup docelowych", "Jakość danych i zgodność z przepisami"]}
+    {"title": "Pośrednictwo w obrocie danymi i bazami adresowymi", "items": ["Marketing oparty na danych", "Pozyskiwanie i przetwarzanie baz adresowych", "Segmentacja i dobór grup docelowych", "Jakość danych i zgodność z przepisami"]}
   ]},
   "books": {"title": "Trzy ulubione książki"}
 }

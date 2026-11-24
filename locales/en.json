@@ -7,13 +7,13 @@
     {"title": "Systems Architecture", "items": ["System design", "Infrastructure architecture", "Integration & interfaces", "Scalability & high availability", "Technical consulting"]},
     {"title": "Infrastructure & DevOps", "items": ["Linux", "Proxmox & virtualisation", "Automation with Bash & Python", "Monitoring & alerting", "Deployment & operations", "Backup & disaster recovery"]},
     {"title": "Server Infrastructure", "items": ["Planning & requirements", "Hardware selection & procurement", "Physical setup & installation", "Configuration & integration", "Maintenance & expansion"]},
-    {"title": "Software Engineering", "items": ["PHP", "Python", "JavaScript", "Bash", "HTML & CSS", "APIs & backend systems"]},
-    {"title": "Databases & Data Engineering", "items": ["PostgreSQL", "MySQL", "MariaDB", "Database design & administration", "Data import & processing", "ETL & data transformation"]},
+    {"title": "Software Engineering", "items": ["PHP", "Python", "Bash", "HTML / CSS / JS", "VHDL"]},
+    {"title": "Databases & Data Engineering", "items": ["PostgreSQL", "MariaDB / MySQL", "Database design & administration", "Data import & processing", "ETL & data transformation"]},
     {"title": "Data Analysis & Statistics", "items": ["Data analysis", "Statistical analysis", "Data interpretation", "Data cleansing & transformation", "Reporting & visualisation", "SQL & Python based analysis"]},
     {"title": "Web Engineering", "items": ["Web applications", "Backend systems", "Frontend integration", "REST APIs", "Performance optimisation"]},
     {"title": "Email Engineering", "items": ["Email delivery solutions", "HTML email templates", "Client compatibility", "Deliverability & optimisation", "Email marketing infrastructure"]},
     {"title": "Digital Marketing Technology", "items": ["SEO", "Email marketing", "Campaign implementation", "Agency & client projects", "Tracking & analysis"]},
-    {"title": "Data & List Broking", "items": ["10 years professional experience", "Data-driven marketing", "List acquisition & processing", "Segmentation & targeting", "Data quality & compliance"]}
+    {"title": "Data & List Broking", "items": ["Data-driven marketing", "List acquisition & processing", "Segmentation & targeting", "Data quality & compliance"]}
   ]},
   "books": {"title": "Three favourite books"}
 }

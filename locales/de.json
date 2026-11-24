@@ -7,13 +7,13 @@
     {"title": "Systemarchitektur", "items": ["Systementwurf", "Infrastrukturarchitektur", "Integration & Schnittstellen", "Skalierbarkeit & Hochverfügbarkeit", "Technische Beratung"]},
     {"title": "Infrastruktur & DevOps", "items": ["Linux", "Proxmox & Virtualisierung", "Automatisierung mit Bash & Python", "Monitoring & Alarmierung", "Bereitstellung & Betrieb", "Datensicherung & Notfallwiederherstellung"]},
     {"title": "Serverinfrastruktur", "items": ["Planung & Anforderungen", "Hardwareauswahl & Beschaffung", "Physischer Aufbau & Installation", "Konfiguration & Integration", "Wartung & Erweiterung"]},
-    {"title": "Softwareentwicklung", "items": ["PHP", "Python", "JavaScript", "Bash", "HTML & CSS", "APIs & Backend-Systeme"]},
-    {"title": "Datenbanken & Data Engineering", "items": ["PostgreSQL", "MySQL", "MariaDB", "Datenbankentwurf & Administration", "Datenimport & Verarbeitung", "ETL & Datentransformation"]},
+    {"title": "Softwareentwicklung", "items": ["PHP", "Python", "Bash", "HTML / CSS / JS", "VHDL"]},
+    {"title": "Datenbanken & Data Engineering", "items": ["PostgreSQL", "MariaDB / MySQL", "Datenbankentwurf & Administration", "Datenimport & Verarbeitung", "ETL & Datentransformation"]},
     {"title": "Datenanalyse & Statistik", "items": ["Datenanalyse", "Statistische Analyse", "Dateninterpretation", "Datenbereinigung & Transformation", "Berichte & Visualisierung", "Analysen mit SQL & Python"]},
     {"title": "Webentwicklung", "items": ["Webanwendungen", "Backend-Systeme", "Frontend-Integration", "REST-APIs", "Leistungsoptimierung"]},
     {"title": "E-Mail-Technik", "items": ["Lösungen für den E-Mail-Versand", "HTML-E-Mail-Vorlagen", "Kompatibilität mit E-Mail-Programmen", "Zustellbarkeit & Optimierung", "Infrastruktur für E-Mail-Marketing"]},
     {"title": "Technologie für digitales Marketing", "items": ["SEO", "E-Mail-Marketing", "Kampagnenumsetzung", "Agentur- & Kundenprojekte", "Tracking & Analyse"]},
-    {"title": "Daten- & Adresshandel", "items": ["10 Jahre Berufserfahrung", "Datenbasiertes Marketing", "Adressbeschaffung & Verarbeitung", "Segmentierung & Zielgruppenauswahl", "Datenqualität & Compliance"]}
+    {"title": "Daten- & Adresshandel", "items": ["Datenbasiertes Marketing", "Adressbeschaffung & Verarbeitung", "Segmentierung & Zielgruppenauswahl", "Datenqualität & Compliance"]}
   ]},
   "books": {"title": "Drei Lieblingsbücher"}
 }
