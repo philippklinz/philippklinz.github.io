@@ -1,0 +1,74 @@
+[
+  {
+    "id": "feynman",
+    "author": "Richard P. Feynman",
+    "editions": {
+      "de": {
+        "title": "Sie belieben wohl zu scherzen, Mr. Feynman!",
+        "url": "https://www.thalia.at/shop/home/artikeldetails/A1047288888",
+        "language": "de",
+        "shop": "Thalia"
+      },
+      "en": {
+        "title": "Surely You’re Joking, Mr. Feynman!",
+        "url": "https://www.penguin.co.uk/books/354126/surely-youre-joking-mr-feynman-by-feynman-richard-p/9780099173311",
+        "language": "en",
+        "shop": "Penguin"
+      },
+      "pl": {
+        "title": "Pan raczy żartować, panie Feynman!",
+        "url": "https://www.znak.com.pl/p/pan-raczy-zartowac-panie-feynman-przypadki-ciekawego-czlowieka-wydanie-2021-richard-p-feynman-153131",
+        "language": "pl",
+        "shop": "Znak"
+      }
+    }
+  },
+  {
+    "id": "heisenberg",
+    "author": "Werner Heisenberg",
+    "editions": {
+      "de": {
+        "title": "Quantentheorie und Philosophie",
+        "url": "https://www.thalia.at/shop/home/artikeldetails/A1000320947",
+        "language": "de",
+        "shop": "Thalia"
+      },
+      "en": {
+        "title": "Physics and Philosophy",
+        "url": "https://www.penguin.co.uk/books/56983/physics-and-philosophy-by-werner-heisenberg-intro-paul-davies/9780141182155",
+        "language": "en",
+        "shop": "Penguin"
+      },
+      "pl": {
+        "title": "Fizyka a filozofia",
+        "url": "https://allegro.pl/produkt/fizyka-a-filozofia-werner-heisenberg-310aa9ca-6ab8-410f-9494-0145b945a350",
+        "language": "pl",
+        "shop": "Allegro"
+      }
+    }
+  },
+  {
+    "id": "little-prince",
+    "author": "Antoine de Saint-Exupéry",
+    "editions": {
+      "de": {
+        "title": "Der kleine Prinz",
+        "url": "https://www.thalia.at/shop/home/artikeldetails/A1051193971",
+        "language": "de",
+        "shop": "Thalia"
+      },
+      "en": {
+        "title": "The Little Prince",
+        "url": "https://www.penguin.co.uk/books/57300/the-little-prince-by-saint-exupery-antoine-de/9780141185620",
+        "language": "en",
+        "shop": "Penguin"
+      },
+      "pl": {
+        "title": "Mały Książę",
+        "url": "https://www.znak.com.pl/p/maly-ksiaze-antoine-de-saint-exupery-202629",
+        "language": "pl",
+        "shop": "Znak"
+      }
+    }
+  }
+]

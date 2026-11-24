@@ -12,7 +12,7 @@ The header has three manually selected panels: the approved professional introdu
 
 Each version is a complete static HTML document. Reading, navigation and language selection work without JavaScript; all three header panels are then shown in sequence. JavaScript enables the manual tabs and optional appearance switch, and preserves the selected panel and current section when changing language. Tabs support arrow keys, Home and End, with no automatic rotation. The selected panel is recorded in the URL; the appearance preference is stored locally if the browser allows it. The site contains no analytics, cookies, remote translation service or third-party runtime.
 
-The owner explicitly limited this website to these three languages. This is a partial adoption of Modern Objectivity's MO-13 language baseline; it does not claim complete coverage of all 24 EU languages. German bibliographic titles remain as printed on the linked editions and carry `lang="de"`. All surrounding text and accessibility labels are translated. German and Polish translations are AI-assisted; independent language review is pending.
+The owner explicitly limited this website to these three languages. This is a partial adoption of Modern Objectivity's MO-13 language baseline; it does not claim complete coverage of all 24 EU languages. Book titles and links follow the chosen edition in `content/books.json`, with matching language attributes. The owner prefers an English edition when no Polish edition is available. All surrounding text and accessibility labels are translated. German and Polish translations are AI-assisted; independent language review is pending.
 
 ## Edit and check
 
@@ -27,6 +27,8 @@ python3 tools/check_html.py
 ```
 
 `tools/generate.mjs` maintains the three pages, a multilingual error page and the sitemap from one shared template. It checks message coverage, empty values and source freshness before generating anything. The source hash is SHA-256 of `JSON.stringify()` of the parsed English catalogue. Coverage checks establish structural completeness, not native-speaker validation.
+
+Edit book editions in `content/books.json`; keep the title, language and destination together. The generator uses the English entry when an edition for the selected language is absent. A related book is not an equivalent translation: substitutions require the owner's choice.
 
 The generator also publishes content-hashed copies of the site CSS and JavaScript. Keep previously published copies: cached pages still refer to them. Language links carry a shared content version so switching languages after an update requests the matching page release. Canonical URLs stay clean; the selected slide and section survive the switch.
 

@@ -38,7 +38,14 @@ for (const [lang] of languages) {
   if (messages.skills.groups.length !== 10) throw new Error(`${lang}: expected ten approved skills groups`);
   catalogue[lang] = messages;
 }
-const pageVersion = hash(JSON.stringify({ config, catalogue, versionedAssets }) + await readFile(fileURLToPath(import.meta.url), 'utf8'));
+const books = JSON.parse(await readFile(root + 'content/books.json', 'utf8'));
+for (const book of books) {
+  for (const [lang] of languages) {
+    const edition = book.editions[lang] ?? book.editions.en;
+    if (!edition?.title || !edition.shop || !languages.some(([tag]) => tag === edition.language) || new URL(edition.url).protocol !== 'https:') throw new Error(`${book.id}: invalid ${lang} book edition`);
+  }
+}
+const pageVersion = hash(JSON.stringify({ config, catalogue, books, versionedAssets }) + await readFile(fileURLToPath(import.meta.url), 'utf8'));
 const route = lang => lang === 'en' ? 'index.html' : `${lang}/index.html`;
 const icon = (paths, cls = '') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
 const icons = [
@@ -55,11 +62,6 @@ const icons = [
 ];
 const globe = icon('<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>');
 const moon = icon('<path d="M20.5 13.2A8.7 8.7 0 0 1 10.8 3.5 8.7 8.7 0 1 0 20.5 13.2Z"/>');
-const books = [
-  { author: 'Richard P. Feynman', title: 'Sie belieben wohl zu scherzen, Mr. Feynman!', url: 'https://www.thalia.at/shop/home/artikeldetails/A1047288888' },
-  { author: 'Werner Heisenberg', title: 'Quantentheorie und Philosophie', url: 'https://www.thalia.at/shop/home/artikeldetails/A1000320947' },
-  { author: 'Antoine de Saint-Exupéry', title: 'Der kleine Prinz', url: 'https://www.thalia.at/shop/home/artikeldetails/A1051193971' }
-];
 function head(lang, t, prefix, is404 = false) {
   const url = baseURL + (lang === 'en' ? '' : `${lang}/`);
   return `<meta charset="utf-8">
@@ -110,7 +112,10 @@ function page(lang, nativeName) {
       <nav class="hero-tabs" aria-label="${esc(t.header.tabsLabel)}"><a id="tab-profile" href="#profile" data-slide="profile">${esc(t.header.profileTab)}</a><a id="tab-books" href="#books" data-slide="books">${esc(t.header.booksTab)}</a><a id="tab-interests" href="#interests" data-slide="interests">${esc(t.header.interestsTab)}</a></nav>
       <div class="hero-panels">
         <section id="profile" class="hero-panel" aria-labelledby="name"><p class="hero-kicker">${esc(t.header.greeting)}</p><h1 id="name">Philipp Klinz<span class="name-accent">.</span></h1><p class="profile-role">${esc(t.header.role)}</p><p class="profile-copy">${esc(t.header.description)}</p></section>
-        <section id="books" class="hero-panel" aria-labelledby="books-title"><h2 id="books-title">${esc(t.books.title)}</h2><div class="book-list">${books.map(book => `<article class="book"><p class="book-author">${esc(book.author)}</p><h3 lang="de"><a href="${book.url}" hreflang="de" rel="external" aria-label="${esc(book.title)} · Thalia">${esc(book.title)}</a></h3></article>`).join('\n')}</div></section>
+        <section id="books" class="hero-panel" aria-labelledby="books-title"><h2 id="books-title">${esc(t.books.title)}</h2><div class="book-list">${books.map(book => {
+          const edition = book.editions[lang] ?? book.editions.en;
+          return `<article class="book"><p class="book-author">${esc(book.author)}</p><h3 lang="${edition.language}"><a href="${esc(edition.url)}" hreflang="${edition.language}" rel="external" aria-label="${esc(edition.title)} · ${esc(edition.shop)}">${esc(edition.title)}</a></h3></article>`;
+        }).join('\n')}</div></section>
         <section id="interests" class="hero-panel" aria-labelledby="interests-title"><h2 id="interests-title">${esc(t.interests.title)}</h2><p class="interest-question">${esc(t.interests.question)}</p><p class="interest-description">${esc(t.interests.description)}</p></section>
       </div>
     </div>
