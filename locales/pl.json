@@ -1,6 +1,6 @@
 {
   "meta": {"title": "Philipp Klinz — Umiejętności i zainteresowania", "description": "Philipp Klinz: architektura systemów, tworzenie oprogramowania, infrastruktura, dane i marketing cyfrowy. Umiejętności i ulubione książki."},
-  "ui": {"skip": "Przejdź do treści", "navigation": "Nawigacja główna", "skills": "Umiejętności", "books": "Książki", "language": "Język", "dark": "Ciemny motyw", "portrait": "Portret Philippa Klinza", "top": "Na górę", "source": "Kod źródłowy strony", "design": "Zaprojektowano z Modern Objectivity.", "notFound": "Nie znaleziono strony", "notFoundText": "Pod tym adresem nie ma strony. Wybierz język, aby wrócić do witryny.", "home": "Przejdź do witryny"},
+  "ui": {"skip": "Przejdź do treści", "navigation": "Nawigacja główna", "skills": "Umiejętności", "books": "Książki", "language": "Język", "dark": "Ciemny motyw", "portrait": "Portret Philippa Klinza", "top": "Na górę", "design": "Zaprojektowano z Modern Objectivity.", "notFound": "Nie znaleziono strony", "notFoundText": "Pod tym adresem nie ma strony. Wybierz język, aby wrócić do witryny.", "home": "Przejdź do witryny"},
   "header": {"fields": "Systemy · Oprogramowanie · Dane"},
   "skills": {"label": "Umiejętności", "title": "Czym się zajmuję", "intro": "Szeroki zakres umiejętności technicznych rozwijanych przez wiele lat — od tworzenia oprogramowania i analizy danych po infrastrukturę serwerową i utrzymanie systemów produkcyjnych.", "groups": [
     {"title": "Architektura systemów", "items": ["Projektowanie systemów", "Architektura infrastruktury", "Integracja i interfejsy", "Skalowalność i wysoka dostępność", "Doradztwo techniczne"]},
@@ -14,5 +14,5 @@
     {"title": "Technologie marketingu cyfrowego", "items": ["SEO", "E-mail marketing", "Realizacja kampanii", "Projekty dla agencji i klientów", "Śledzenie i analiza"]},
     {"title": "Pośrednictwo w obrocie danymi i bazami adresowymi", "items": ["10 lat doświadczenia zawodowego", "Marketing oparty na danych", "Pozyskiwanie i przetwarzanie baz adresowych", "Segmentacja i dobór grup docelowych", "Jakość danych i zgodność z przepisami"]}
   ]},
-  "books": {"label": "Trochę bardziej osobiście", "title": "Trzy ulubione książki", "edition": "Linki prowadzą do niemieckojęzycznych wydań w księgarni Thalia.", "link": "Zobacz w Thalia"}
+  "books": {"title": "Trzy ulubione książki"}
 }

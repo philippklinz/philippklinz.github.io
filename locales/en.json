@@ -1,6 +1,6 @@
 {
   "meta": {"title": "Philipp Klinz — Skills & interests", "description": "Philipp Klinz: systems architecture, software engineering, infrastructure, data and digital marketing. Skills and favourite books."},
-  "ui": {"skip": "Skip to content", "navigation": "Main navigation", "skills": "Skills", "books": "Books", "language": "Language", "dark": "Dark appearance", "portrait": "Portrait of Philipp Klinz", "top": "Back to top", "source": "Website source", "design": "Designed with Modern Objectivity.", "notFound": "Page not found", "notFoundText": "This address does not lead to a page. Choose a language to return to the website.", "home": "Go to the website"},
+  "ui": {"skip": "Skip to content", "navigation": "Main navigation", "skills": "Skills", "books": "Books", "language": "Language", "dark": "Dark appearance", "portrait": "Portrait of Philipp Klinz", "top": "Back to top", "design": "Designed with Modern Objectivity.", "notFound": "Page not found", "notFoundText": "This address does not lead to a page. Choose a language to return to the website.", "home": "Go to the website"},
   "header": {"fields": "Systems · Software · Data"},
   "skills": {"label": "Skills", "title": "What I work with", "intro": "A broad technical skill set built over many years — from software engineering and data analysis to server infrastructure and production operations.", "groups": [
     {"title": "Systems Architecture", "items": ["System design", "Infrastructure architecture", "Integration & interfaces", "Scalability & high availability", "Technical consulting"]},
@@ -14,5 +14,5 @@
     {"title": "Digital Marketing Technology", "items": ["SEO", "Email marketing", "Campaign implementation", "Agency & client projects", "Tracking & analysis"]},
     {"title": "Data & List Broking", "items": ["10 years professional experience", "Data-driven marketing", "List acquisition & processing", "Segmentation & targeting", "Data quality & compliance"]}
   ]},
-  "books": {"label": "A little more personal", "title": "Three favourite books", "edition": "Links lead to German-language editions at Thalia.", "link": "View at Thalia"}
+  "books": {"title": "Three favourite books"}
 }

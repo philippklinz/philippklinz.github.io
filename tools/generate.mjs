@@ -96,7 +96,7 @@ function page(lang, nativeName) {
 </header>
 <main id="main">
   <section class="container hero" aria-labelledby="name">
-    <div class="hero-text"><h1 id="name"><span>Philipp</span><span>Klinz<span class="name-accent">.</span></span></h1><p class="hero-fields">${esc(t.header.fields)}</p><div class="hero-links"><a href="#skills">${esc(t.ui.skills)}</a><a href="https://github.com/philippklinz" lang="en">GitHub</a></div></div>
+    <div class="hero-text"><h1 id="name"><span>Philipp</span><span>Klinz<span class="name-accent">.</span></span></h1><p class="hero-fields">${esc(t.header.fields)}</p><div class="hero-links"><a href="#skills">${esc(t.ui.skills)}</a></div></div>
     <figure class="hero-portrait"><img src="${prefix}assets/philipp-klinz.jpg" alt="${esc(t.ui.portrait)}" width="1024" height="1024" fetchpriority="high" decoding="async"></figure>
   </section>
   <section id="skills" class="container section" aria-labelledby="skills-title">
@@ -104,11 +104,11 @@ function page(lang, nativeName) {
     <div class="skills-grid">${t.skills.groups.map((group, i) => `<article class="skill"><div class="skill-heading">${icon(icons[i], 'skill-icon')}<h3>${esc(group.title)}</h3></div><ul>${group.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul></article>`).join('\n')}</div>
   </section>
   <section id="books" class="books-section section" aria-labelledby="books-title"><div class="container">
-    <div class="section-head"><div><span class="eyebrow">${esc(t.books.label)}</span><h2 id="books-title">${esc(t.books.title)}</h2><span class="heading-rule" aria-hidden="true"></span></div><p>${esc(t.books.edition)}</p></div>
-    <div class="book-list">${books.map(book => `<article class="book"><p class="book-author">${esc(book.author)}</p><h3 lang="de">${esc(book.title)}</h3><a href="${book.url}" hreflang="de" rel="external">${esc(t.books.link)}<span class="mo-sr-only" lang="de">: ${esc(book.title)}</span></a></article>`).join('\n')}</div>
+    <div class="section-head"><h2 id="books-title">${esc(t.books.title)}</h2></div>
+    <div class="book-list">${books.map(book => `<article class="book"><p class="book-author">${esc(book.author)}</p><h3 lang="de"><a href="${book.url}" hreflang="de" rel="external" aria-label="${esc(book.title)} · Thalia">${esc(book.title)}</a></h3></article>`).join('\n')}</div>
   </div></section>
 </main>
-<footer class="container footer"><p><strong class="footer-name">Philipp Klinz</strong><a href="https://philippklinz.github.io/modern-objectivity-style/?lang=${lang}">${esc(t.ui.design)}</a></p><nav class="footer-links" aria-label="${esc(t.ui.navigation)}"><a href="https://github.com/philippklinz" lang="en">GitHub</a><a href="https://github.com/philippklinz/philippklinz.github.io">${esc(t.ui.source)}</a><a href="#top">${esc(t.ui.top)}</a></nav></footer>
+<footer class="container footer"><p><a href="https://philippklinz.github.io/modern-objectivity-style/?lang=${lang}">${esc(t.ui.design)}</a></p><nav class="footer-links" aria-label="${esc(t.ui.navigation)}"><a href="#top">${esc(t.ui.top)}</a></nav></footer>
 <script src="${prefix}assets/site.js" defer></script>
 </body>
 </html>

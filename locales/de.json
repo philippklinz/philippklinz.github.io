@@ -1,6 +1,6 @@
 {
   "meta": {"title": "Philipp Klinz — Fähigkeiten & Interessen", "description": "Philipp Klinz: Systemarchitektur, Softwareentwicklung, Infrastruktur, Daten und digitales Marketing. Fähigkeiten und Lieblingsbücher."},
-  "ui": {"skip": "Zum Inhalt springen", "navigation": "Hauptnavigation", "skills": "Fähigkeiten", "books": "Bücher", "language": "Sprache", "dark": "Dunkle Darstellung", "portrait": "Porträt von Philipp Klinz", "top": "Nach oben", "source": "Quellcode der Website", "design": "Gestaltet mit Modern Objectivity.", "notFound": "Seite nicht gefunden", "notFoundText": "Unter dieser Adresse gibt es keine Seite. Wähle eine Sprache, um zur Website zurückzukehren.", "home": "Zur Website"},
+  "ui": {"skip": "Zum Inhalt springen", "navigation": "Hauptnavigation", "skills": "Fähigkeiten", "books": "Bücher", "language": "Sprache", "dark": "Dunkle Darstellung", "portrait": "Porträt von Philipp Klinz", "top": "Nach oben", "design": "Gestaltet mit Modern Objectivity.", "notFound": "Seite nicht gefunden", "notFoundText": "Unter dieser Adresse gibt es keine Seite. Wähle eine Sprache, um zur Website zurückzukehren.", "home": "Zur Website"},
   "header": {"fields": "Systeme · Software · Daten"},
   "skills": {"label": "Fähigkeiten", "title": "Womit ich arbeite", "intro": "Ein breites technisches Spektrum, gewachsen über viele Jahre — von Softwareentwicklung und Datenanalyse bis zu Serverinfrastruktur und dem Betrieb produktiver Systeme.", "groups": [
     {"title": "Systemarchitektur", "items": ["Systementwurf", "Infrastrukturarchitektur", "Integration & Schnittstellen", "Skalierbarkeit & Hochverfügbarkeit", "Technische Beratung"]},
@@ -14,5 +14,5 @@
     {"title": "Technologie für digitales Marketing", "items": ["SEO", "E-Mail-Marketing", "Kampagnenumsetzung", "Agentur- & Kundenprojekte", "Tracking & Analyse"]},
     {"title": "Daten- & Adresshandel", "items": ["10 Jahre Berufserfahrung", "Datenbasiertes Marketing", "Adressbeschaffung & Verarbeitung", "Segmentierung & Zielgruppenauswahl", "Datenqualität & Compliance"]}
   ]},
-  "books": {"label": "Etwas Persönliches", "title": "Drei Lieblingsbücher", "edition": "Die Links führen zu deutschsprachigen Ausgaben bei Thalia.", "link": "Bei Thalia ansehen"}
+  "books": {"title": "Drei Lieblingsbücher"}
 }
