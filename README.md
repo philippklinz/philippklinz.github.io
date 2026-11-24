@@ -39,3 +39,5 @@ Set `philipp-klinz.net` as the custom domain in GitHub Pages and configure the d
 ## Design and assets
 
 The local `assets/modern-objectivity.css` is copied without modification from [Modern Objectivity](https://github.com/philippklinz/modern-objectivity-style) at commit `4301cfc75e7732550bc9d078cee5edeae49ce8d6`. `assets/site.css` adapts its typography, semantic colours and controls to a personal website. See [NOTICE.md](NOTICE.md) for licensing and asset provenance, and [docs/content-sources.md](docs/content-sources.md) for the supplied content and checked book links.
+
+The website self-hosts [LiberationFontsWeb](https://codeberg.org/philippklinz/LiberationFontsWeb) at revision `991e89ba225875d100b5bc4048626e8b6ac93927`: Sans for the interface, Mono for labels, and Serif for book titles. Latin and Latin Extended subsets cover the three selected languages. The font software keeps its SIL OFL 1.1 licence.

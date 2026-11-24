@@ -2,6 +2,7 @@
 
 - This repository is Philipp Klinz's personal website. Use plain static HTML, CSS and JavaScript. No application framework, runtime service, analytics or package dependency is needed.
 - The owner chose **English, German and Polish only**, with English as the default. Do not expand the language scope without a new request.
+- Load the vendored LiberationFontsWeb families from `assets/fonts/`. Preserve font files, Web family names, licence and upstream revision.
 - Use the existing local Modern Objectivity stylesheet and semantic tokens. Changes belong in `assets/site.css`; preserve upstream provenance and licence notices.
 - The approved first version is: supplied portrait and name, the ten skills groups from the supplied reference, and the three confirmed favourite books. Do not invent biographical details, professional titles, services, project claims or contact details. The owner will provide past-project content separately.
 - The confirmed Heisenberg book is **Quantentheorie und Philosophie**, Reclam, ISBN 978-3-15-009948-3.

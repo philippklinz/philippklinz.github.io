@@ -67,6 +67,9 @@ ${languages.map(([tag]) => `<link rel="alternate" hreflang="${tag}" href="${esc(
 <meta property="og:image:alt" content="${esc(t.ui.portrait)}">`}
 <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
 <script src="${prefix}assets/theme.js"></script>
+<link rel="preload" href="${prefix}assets/fonts/LiberationSansWeb-Regular.latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${prefix}assets/fonts/LiberationSansWeb-Bold.latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="${prefix}assets/fonts/fonts.css">
 <link rel="stylesheet" href="${prefix}assets/modern-objectivity.css">
 <link rel="stylesheet" href="${prefix}assets/site.css">`;
 }

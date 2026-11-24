@@ -1,4 +1,5 @@
 /* Personal website stage for the local Modern Objectivity reference stylesheet. */
+:root { --mo-font: "Liberation Sans Web", "Liberation Sans", Arial, sans-serif; --mo-mono: "Liberation Mono Web", "Liberation Mono", Consolas, monospace; --mo-serif: "Liberation Serif Web", "Liberation Serif", Georgia, serif; }
 html { scroll-padding-top: 6.5rem; }
 body { font-size: 1rem; line-height: 1.6; }
 [hidden] { display: none !important; }
