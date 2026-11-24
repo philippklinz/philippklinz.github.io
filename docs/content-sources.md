@@ -2,7 +2,7 @@
 
 The owner supplied a screenshot headed “What I work with” and a portrait named `jupp-.jpg`. The English skills list follows that screenshot; British English spelling is used consistently. The portrait is copied byte-for-byte, with cropping and greyscale controlled only by CSS.
 
-The owner requested the exact footer credit “portrait by jolly schwarz”, linked to https://jollyschwarz.com/ and placed below the design credit. This wording is retained in all three language editions and marked as English.
+The owner requested a portrait credit linked to https://jollyschwarz.com/, with proper capitalisation and translated wording: “Portrait by Jolly Schwarz” in English, “Porträt von Jolly Schwarz” in German and “Portret autorstwa Jolly Schwarz” in Polish. Both the design credit and portrait credit are placed inside the expandable legal notice.
 
 ## Legal notice and contact
 
