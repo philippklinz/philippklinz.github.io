@@ -29,15 +29,17 @@ function insideDistance(x, y, outline) {
 }
 export function portraitSurface(x, y) {
   const edge = smooth(0, .025, Math.min(x, 1 - x, y, 1 - y));
-  const face = smooth(-.018, .016, insideDistance(x, y, headOutline));
+  // Keep the full visible silhouette attached; feather beyond the ear and cheek.
+  const face = smooth(-.060, -.018, insideDistance(x, y, headOutline));
   const neck = (1 - smooth(.55, .79, y)) * smooth(.47, .55, y)
     * (1 - smooth(.105, .155, Math.abs(x - .675)));
   const head = Math.max(face, neck) * edge;
   const body = smooth(-.012, .035, insideDistance(x, y, bodyOutline))
     * smooth(.47, .68, y) * edge;
-  const round = Math.sqrt(Math.max(0, 1 - ((x - .67) / .25) ** 2 - ((y - .30) / .34) ** 2));
+  // A continuous depth floor keeps the ear from staying behind while the face turns.
+  const round = Math.exp(-1.2 * (((x - .67) / .25) ** 2 + ((y - .30) / .34) ** 2));
   const nose = Math.exp(-(((x - .613) / .055) ** 2 + ((y - .355) / .07) ** 2));
-  return { head, body, depth: head * (.16 * round + .085 * nose) };
+  return { head, body, depth: head * (.110 + .055 * round + .045 * nose) };
 }
 
 // 4.6 seconds of motion, then 3.4 seconds of stillness. Every movement returns exactly home.
