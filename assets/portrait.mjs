@@ -51,7 +51,8 @@ export function portraitPose(time) {
   }
   const phase = (clock - start) / duration;
   const gesture = smooth(0, .38, phase) * (1 - smooth(.60, 1, phase));
-  const direction = [1, -.65, .8][Math.floor(Math.max(0, time) / cycle) % 3];
+  // Soften the first rightward turn to reduce stretching at the image-left ear.
+  const direction = [.75, -.65, .8][Math.floor(Math.max(0, time) / cycle) % 3];
   return {
     yaw: .084 * gesture * direction,
     pitch: -.032 * gesture,

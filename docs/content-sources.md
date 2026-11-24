@@ -6,6 +6,8 @@ The owner requested a portrait credit linked to https://jollyschwarz.com/, with 
 
 The owner subsequently requested a subtle living portrait inspired by the brief movements in magical newspaper photographs: small head movements and breathing with quiet pauses. The first version uses the unmodified photograph on a shallow surface rendered locally with Three.js. It does not add blinking, speech or a fully reconstructed head.
 
+The owner approved the portrait tooltip “Für den Tagespropheten hat’s nicht gereicht.”, translated into English and Polish using the localised newspaper names. It is presented as a native image title tooltip.
+
 ## Legal notice and contact
 
 The owner explicitly confirmed that the website has no commercial use and requested a small disclosure under § 25(5) of the Austrian Media Act, naming Philipp Klinz and Vienna's 17th district as the place of residence. The supplied contact mailbox uses the local part `webdiarrhea` (without a hyphen) at the site's domain. The address and mail link are assembled in JavaScript from an encoded value; a readable `[at]` / `[dot]` fallback remains available without scripts. This deters simple harvesting only, not crawlers that decode the value or execute JavaScript.
