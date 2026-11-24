@@ -40,8 +40,8 @@ export function portraitSurface(x, y) {
   return { head, body, depth: head * (.16 * round + .085 * nose) };
 }
 
-// 4.6 seconds of motion, surrounded by stillness. Every movement returns exactly home.
-export const PORTRAIT_TIMING = Object.freeze({ cycle: 15000, start: 1800, duration: 4600 });
+// 4.6 seconds of motion, then 3.4 seconds of stillness. Every movement returns exactly home.
+export const PORTRAIT_TIMING = Object.freeze({ cycle: 8000, start: 900, duration: 4600 });
 export function portraitPose(time) {
   const { cycle, start, duration } = PORTRAIT_TIMING;
   const clock = Math.max(0, time) % cycle;
@@ -53,10 +53,10 @@ export function portraitPose(time) {
   const gesture = smooth(0, .38, phase) * (1 - smooth(.60, 1, phase));
   const direction = [1, -.65, .8][Math.floor(Math.max(0, time) / cycle) % 3];
   return {
-    yaw: .042 * gesture * direction,
-    pitch: -.016 * gesture,
-    roll: -.009 * gesture * direction,
-    breath: .0040 * Math.sin(Math.PI * phase) ** 2,
+    yaw: .084 * gesture * direction,
+    pitch: -.032 * gesture,
+    roll: -.018 * gesture * direction,
+    breath: .0080 * Math.sin(Math.PI * phase) ** 2,
     moving: true, wait: 0
   };
 }

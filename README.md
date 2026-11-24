@@ -2,7 +2,7 @@
 
 Personal website for **Philipp Klinz**, hosted through GitHub Pages. The canonical address is **https://philipp-klinz.net/**.
 
-The header has three manually selected panels: the approved professional introduction, three confirmed favourite books, and the owner's question and interests. The supplied portrait is displayed in greyscale with CSS. A locally rendered Three.js surface adds a very small head movement and breathing gesture for 4.6 seconds every 15 seconds, with the background and frame edges held still. The ten skills groups follow the owner's reference image. Past projects will be added separately when the owner provides their content.
+The header has three manually selected panels: the approved professional introduction, three confirmed favourite books, and the owner's question and interests. The supplied portrait is displayed in greyscale with CSS. A locally rendered Three.js surface adds a head movement and breathing gesture for 4.6 seconds every 8 seconds, separated by 3.4 seconds of stillness, with the background and frame edges held still. The ten skills groups follow the owner's reference image. Past projects will be added separately when the owner provides their content.
 
 ## Languages
 
