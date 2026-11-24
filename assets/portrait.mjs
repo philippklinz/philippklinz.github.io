@@ -53,10 +53,10 @@ export function portraitPose(time) {
   const gesture = smooth(0, .38, phase) * (1 - smooth(.60, 1, phase));
   const direction = [1, -.65, .8][Math.floor(Math.max(0, time) / cycle) % 3];
   return {
-    yaw: .021 * gesture * direction,
-    pitch: -.008 * gesture,
-    roll: -.0045 * gesture * direction,
-    breath: .0020 * Math.sin(Math.PI * phase) ** 2,
+    yaw: .042 * gesture * direction,
+    pitch: -.016 * gesture,
+    roll: -.009 * gesture * direction,
+    breath: .0040 * Math.sin(Math.PI * phase) ** 2,
     moving: true, wait: 0
   };
 }
