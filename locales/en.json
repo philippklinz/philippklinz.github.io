@@ -1,7 +1,8 @@
 {
   "meta": {"title": "Philipp Klinz — Skills & interests", "description": "Philipp Klinz: systems architecture, software engineering, infrastructure, data and digital marketing. Skills and favourite books."},
   "ui": {"skip": "Skip to content", "navigation": "Main navigation", "skills": "Skills", "books": "Books", "language": "Language", "dark": "Dark appearance", "portrait": "Portrait of Philipp Klinz", "top": "Back to top", "design": "Designed with Modern Objectivity.", "notFound": "Page not found", "notFoundText": "This address does not lead to a page. Choose a language to return to the website.", "home": "Go to the website"},
-  "header": {"fields": "Systems · Software · Data"},
+  "header": {"greeting": "Hello, I’m", "role": "Systems Architect & DevOps Engineer", "description": "Designing and building software platforms, infrastructure and data-driven solutions. With a broad technical background in software engineering, Linux systems, data analysis and production operations.", "tabsLabel": "About Philipp Klinz", "profileTab": "Profile", "booksTab": "Books", "interestsTab": "Interests"},
+  "interests": {"title": "What I’m thinking about", "question": "How do we build the world of tomorrow?", "description": "I’m interested in mathematics, physics, anthropology and computer science."},
   "skills": {"label": "Skills", "title": "What I work with", "intro": "A broad technical skill set built over many years — from software engineering and data analysis to server infrastructure and production operations.", "groups": [
     {"title": "Systems Architecture", "items": ["System design", "Infrastructure architecture", "Integration & interfaces", "Scalability & high availability", "Technical consulting"]},
     {"title": "Infrastructure & DevOps", "items": ["Linux", "Proxmox & virtualisation", "Automation with Bash & Python", "Monitoring & alerting", "Deployment & operations", "Backup & disaster recovery"]},

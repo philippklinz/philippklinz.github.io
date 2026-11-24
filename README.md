@@ -2,7 +2,7 @@
 
 Personal website for **Philipp Klinz**, hosted through GitHub Pages. The canonical address is **https://philipp-klinz.net/**.
 
-The first version contains the supplied portrait, the ten skills groups from the owner's reference image, and three confirmed favourite books. Past projects will be added separately when the owner provides their content. No biography, services pitch or additional professional claims have been invented.
+The header has three manually selected panels: the approved professional introduction, three confirmed favourite books, and the owner's question and interests. The supplied portrait stays in place and is displayed in greyscale with CSS. The ten skills groups follow the owner's reference image. Past projects will be added separately when the owner provides their content.
 
 ## Languages
 
@@ -10,7 +10,7 @@ The first version contains the supplied portrait, the ten skills groups from the
 - German: `de/index.html`
 - Polish: `pl/index.html`
 
-Each version is a complete static HTML document. Reading, navigation and language selection work without JavaScript. JavaScript only enables the optional appearance switch and preserves the current section when changing language. The appearance preference is stored locally if the browser allows it. The site contains no analytics, cookies, remote translation service or third-party runtime.
+Each version is a complete static HTML document. Reading, navigation and language selection work without JavaScript; all three header panels are then shown in sequence. JavaScript enables the manual tabs and optional appearance switch, and preserves the selected panel and current section when changing language. Tabs support arrow keys, Home and End, with no automatic rotation. The selected panel is recorded in the URL; the appearance preference is stored locally if the browser allows it. The site contains no analytics, cookies, remote translation service or third-party runtime.
 
 The owner explicitly limited this website to these three languages. This is a partial adoption of Modern Objectivity's MO-13 language baseline; it does not claim complete coverage of all 24 EU languages. German bibliographic titles remain as printed on the linked editions and carry `lang="de"`. All surrounding text and accessibility labels are translated. German and Polish translations are AI-assisted; independent language review is pending.
 

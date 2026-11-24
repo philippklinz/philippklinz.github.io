@@ -40,8 +40,17 @@
   </div>
 </header>
 <main id="main">
-  <section class="container hero" aria-labelledby="name">
-    <div class="hero-text"><h1 id="name"><span>Philipp</span><span>Klinz<span class="name-accent">.</span></span></h1><p class="hero-fields">Systems · Software · Data</p><div class="hero-links"><a href="#skills">Skills</a></div></div>
+  <section class="container hero" aria-label="Philipp Klinz">
+    <div class="hero-text">
+      <nav class="hero-tabs" aria-label="About Philipp Klinz"><a id="tab-profile" href="#profile" data-slide="profile">Profile</a><a id="tab-books" href="#books" data-slide="books">Books</a><a id="tab-interests" href="#interests" data-slide="interests">Interests</a></nav>
+      <div class="hero-panels">
+        <section id="profile" class="hero-panel" aria-labelledby="name"><p class="hero-kicker">Hello, I’m</p><h1 id="name">Philipp Klinz<span class="name-accent">.</span></h1><p class="profile-role">Systems Architect &amp; DevOps Engineer</p><p class="profile-copy">Designing and building software platforms, infrastructure and data-driven solutions. With a broad technical background in software engineering, Linux systems, data analysis and production operations.</p></section>
+        <section id="books" class="hero-panel" aria-labelledby="books-title"><h2 id="books-title">Three favourite books</h2><div class="book-list"><article class="book"><p class="book-author">Richard P. Feynman</p><h3 lang="de"><a href="https://www.thalia.at/shop/home/artikeldetails/A1047288888" hreflang="de" rel="external" aria-label="Sie belieben wohl zu scherzen, Mr. Feynman! · Thalia">Sie belieben wohl zu scherzen, Mr. Feynman!</a></h3></article>
+<article class="book"><p class="book-author">Werner Heisenberg</p><h3 lang="de"><a href="https://www.thalia.at/shop/home/artikeldetails/A1000320947" hreflang="de" rel="external" aria-label="Quantentheorie und Philosophie · Thalia">Quantentheorie und Philosophie</a></h3></article>
+<article class="book"><p class="book-author">Antoine de Saint-Exupéry</p><h3 lang="de"><a href="https://www.thalia.at/shop/home/artikeldetails/A1051193971" hreflang="de" rel="external" aria-label="Der kleine Prinz · Thalia">Der kleine Prinz</a></h3></article></div></section>
+        <section id="interests" class="hero-panel" aria-labelledby="interests-title"><h2 id="interests-title">What I’m thinking about</h2><p class="interest-question">How do we build the world of tomorrow?</p><p class="interest-description">I’m interested in mathematics, physics, anthropology and computer science.</p></section>
+      </div>
+    </div>
     <figure class="hero-portrait"><img src="./assets/philipp-klinz.jpg" alt="Portrait of Philipp Klinz" width="1024" height="1024" fetchpriority="high" decoding="async"></figure>
   </section>
   <section id="skills" class="container section" aria-labelledby="skills-title">
@@ -57,12 +66,6 @@
 <article class="skill"><div class="skill-heading"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 17-6v16L3 14Zm4 5 2 6h4l-2-5"/></svg><h3>Digital Marketing Technology</h3></div><ul><li>SEO</li><li>Email marketing</li><li>Campaign implementation</li><li>Agency &amp; client projects</li><li>Tracking &amp; analysis</li></ul></article>
 <article class="skill"><div class="skill-heading"><svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M5 21v-4a7 7 0 0 1 14 0v4Z"/></svg><h3>Data &amp; List Broking</h3></div><ul><li>10 years professional experience</li><li>Data-driven marketing</li><li>List acquisition &amp; processing</li><li>Segmentation &amp; targeting</li><li>Data quality &amp; compliance</li></ul></article></div>
   </section>
-  <section id="books" class="books-section section" aria-labelledby="books-title"><div class="container">
-    <div class="section-head"><h2 id="books-title">Three favourite books</h2></div>
-    <div class="book-list"><article class="book"><p class="book-author">Richard P. Feynman</p><h3 lang="de"><a href="https://www.thalia.at/shop/home/artikeldetails/A1047288888" hreflang="de" rel="external" aria-label="Sie belieben wohl zu scherzen, Mr. Feynman! · Thalia">Sie belieben wohl zu scherzen, Mr. Feynman!</a></h3></article>
-<article class="book"><p class="book-author">Werner Heisenberg</p><h3 lang="de"><a href="https://www.thalia.at/shop/home/artikeldetails/A1000320947" hreflang="de" rel="external" aria-label="Quantentheorie und Philosophie · Thalia">Quantentheorie und Philosophie</a></h3></article>
-<article class="book"><p class="book-author">Antoine de Saint-Exupéry</p><h3 lang="de"><a href="https://www.thalia.at/shop/home/artikeldetails/A1051193971" hreflang="de" rel="external" aria-label="Der kleine Prinz · Thalia">Der kleine Prinz</a></h3></article></div>
-  </div></section>
 </main>
 <footer class="container footer"><p><a href="https://philippklinz.github.io/modern-objectivity-style/?lang=en">Designed with Modern Objectivity.</a></p><nav class="footer-links" aria-label="Main navigation"><a href="#top">Back to top</a></nav></footer>
 <script src="./assets/site.js" defer></script>

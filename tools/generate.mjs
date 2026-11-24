@@ -95,18 +95,21 @@ function page(lang, nativeName) {
   </div>
 </header>
 <main id="main">
-  <section class="container hero" aria-labelledby="name">
-    <div class="hero-text"><h1 id="name"><span>Philipp</span><span>Klinz<span class="name-accent">.</span></span></h1><p class="hero-fields">${esc(t.header.fields)}</p><div class="hero-links"><a href="#skills">${esc(t.ui.skills)}</a></div></div>
+  <section class="container hero" aria-label="Philipp Klinz">
+    <div class="hero-text">
+      <nav class="hero-tabs" aria-label="${esc(t.header.tabsLabel)}"><a id="tab-profile" href="#profile" data-slide="profile">${esc(t.header.profileTab)}</a><a id="tab-books" href="#books" data-slide="books">${esc(t.header.booksTab)}</a><a id="tab-interests" href="#interests" data-slide="interests">${esc(t.header.interestsTab)}</a></nav>
+      <div class="hero-panels">
+        <section id="profile" class="hero-panel" aria-labelledby="name"><p class="hero-kicker">${esc(t.header.greeting)}</p><h1 id="name">Philipp Klinz<span class="name-accent">.</span></h1><p class="profile-role">${esc(t.header.role)}</p><p class="profile-copy">${esc(t.header.description)}</p></section>
+        <section id="books" class="hero-panel" aria-labelledby="books-title"><h2 id="books-title">${esc(t.books.title)}</h2><div class="book-list">${books.map(book => `<article class="book"><p class="book-author">${esc(book.author)}</p><h3 lang="de"><a href="${book.url}" hreflang="de" rel="external" aria-label="${esc(book.title)} · Thalia">${esc(book.title)}</a></h3></article>`).join('\n')}</div></section>
+        <section id="interests" class="hero-panel" aria-labelledby="interests-title"><h2 id="interests-title">${esc(t.interests.title)}</h2><p class="interest-question">${esc(t.interests.question)}</p><p class="interest-description">${esc(t.interests.description)}</p></section>
+      </div>
+    </div>
     <figure class="hero-portrait"><img src="${prefix}assets/philipp-klinz.jpg" alt="${esc(t.ui.portrait)}" width="1024" height="1024" fetchpriority="high" decoding="async"></figure>
   </section>
   <section id="skills" class="container section" aria-labelledby="skills-title">
     <div class="section-head"><div><span class="eyebrow">${esc(t.skills.label)}</span><h2 id="skills-title">${esc(t.skills.title)}</h2><span class="heading-rule" aria-hidden="true"></span></div><p>${esc(t.skills.intro)}</p></div>
     <div class="skills-grid">${t.skills.groups.map((group, i) => `<article class="skill"><div class="skill-heading">${icon(icons[i], 'skill-icon')}<h3>${esc(group.title)}</h3></div><ul>${group.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul></article>`).join('\n')}</div>
   </section>
-  <section id="books" class="books-section section" aria-labelledby="books-title"><div class="container">
-    <div class="section-head"><h2 id="books-title">${esc(t.books.title)}</h2></div>
-    <div class="book-list">${books.map(book => `<article class="book"><p class="book-author">${esc(book.author)}</p><h3 lang="de"><a href="${book.url}" hreflang="de" rel="external" aria-label="${esc(book.title)} · Thalia">${esc(book.title)}</a></h3></article>`).join('\n')}</div>
-  </div></section>
 </main>
 <footer class="container footer"><p><a href="https://philippklinz.github.io/modern-objectivity-style/?lang=${lang}">${esc(t.ui.design)}</a></p><nav class="footer-links" aria-label="${esc(t.ui.navigation)}"><a href="#top">${esc(t.ui.top)}</a></nav></footer>
 <script src="${prefix}assets/site.js" defer></script>

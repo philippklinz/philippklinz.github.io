@@ -1,8 +1,12 @@
 # Content sources
 
-The owner supplied a screenshot headed “What I work with” and a portrait named `jupp-.jpg`. The English skills list follows that screenshot; British English spelling is used consistently. The portrait is copied byte-for-byte, with cropping controlled only by responsive CSS display.
+The owner supplied a screenshot headed “What I work with” and a portrait named `jupp-.jpg`. The English skills list follows that screenshot; British English spelling is used consistently. The portrait is copied byte-for-byte, with cropping and greyscale controlled only by CSS.
 
-No professional biography or past-project material was supplied for the first version. These are intentionally outside its content scope.
+The owner subsequently supplied a profile reference and approved its title, “Systems Architect & DevOps Engineer”, and its description about software platforms, infrastructure, data-driven solutions, Linux systems, data analysis and production operations. The name in the reference is replaced with Philipp Klinz. No past-project material has been supplied yet.
+
+## Interests
+
+The owner provided the question “Wie entwickeln wir die Welt von morgen?” and named mathematics, physics, anthropology and computer science. The approved German sentence is “Ich beschäftige mich mit Mathematik, Physik, Anthropologie und Informatik.” These form the third header panel, translated into English and Polish.
 
 ## Favourite books
 

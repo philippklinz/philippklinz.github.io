@@ -31,6 +31,83 @@
       link.href = destination.href;
     });
   };
+  const hero = document.querySelector('.hero');
+  const tablist = hero?.querySelector('.hero-tabs');
+  const tabs = tablist ? [...tablist.querySelectorAll('[data-slide]')] : [];
+  const panels = hero ? [...hero.querySelectorAll('.hero-panel')] : [];
+  const slideIds = tabs.map(tab => tab.dataset.slide);
+  let activeSlide = 'profile';
+  function slideFromURL() {
+    const url = new URL(location.href);
+    const anchor = url.hash.slice(1);
+    if (slideIds.includes(anchor)) return anchor;
+    const requested = url.searchParams.get('slide');
+    return slideIds.includes(requested) ? requested : 'profile';
+  }
+  function selectSlide(id, writeURL = false) {
+    activeSlide = slideIds.includes(id) ? id : 'profile';
+    panels.forEach(panel => {
+      const active = panel.id === activeSlide;
+      panel.classList.toggle('is-active', active);
+      panel.setAttribute('aria-hidden', String(!active));
+      panel.inert = !active;
+    });
+    tabs.forEach(tab => {
+      const active = tab.dataset.slide === activeSlide;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    if (writeURL) {
+      const url = new URL(location.href);
+      if (activeSlide === 'profile') url.searchParams.delete('slide');
+      else url.searchParams.set('slide', activeSlide);
+      url.hash = activeSlide;
+      try { history.replaceState(null, '', url); } catch (_) {}
+    }
+    updateLanguageLinks();
+  }
+  if (tabs.length === 3 && panels.length === 3) {
+    tablist.setAttribute('role', 'tablist');
+    tabs.forEach(tab => {
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', tab.dataset.slide);
+      tab.addEventListener('click', event => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        selectSlide(tab.dataset.slide, true);
+      });
+      tab.addEventListener('keydown', event => {
+        if (event.key === ' ') {
+          event.preventDefault();
+          selectSlide(tab.dataset.slide, true);
+          return;
+        }
+        let index = tabs.indexOf(tab);
+        if (event.key === 'ArrowRight') index = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') index = (index + tabs.length - 1) % tabs.length;
+        else if (event.key === 'Home') index = 0;
+        else if (event.key === 'End') index = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectSlide(tabs[index].dataset.slide, true);
+        tabs[index].focus();
+      });
+    });
+    panels.forEach(panel => {
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', `tab-${panel.id}`);
+      panel.tabIndex = 0;
+    });
+    selectSlide(slideFromURL());
+    hero.classList.add('is-enhanced');
+    // Open the books panel before the normal anchor navigation scrolls to it.
+    document.querySelectorAll('a[href="#books"]:not([data-slide])').forEach(link => {
+      link.addEventListener('click', () => selectSlide('books', true));
+    });
+    const restoreSlide = () => selectSlide(slideFromURL());
+    window.addEventListener('hashchange', restoreSlide);
+    window.addEventListener('popstate', restoreSlide);
+  }
   updateLanguageLinks();
   window.addEventListener('hashchange', updateLanguageLinks);
   window.addEventListener('popstate', updateLanguageLinks);
