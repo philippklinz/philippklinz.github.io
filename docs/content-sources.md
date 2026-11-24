@@ -2,6 +2,8 @@
 
 The owner supplied a screenshot headed “What I work with” and a portrait named `jupp-.jpg`. The English skills list follows that screenshot; British English spelling is used consistently. The portrait is copied byte-for-byte, with cropping and greyscale controlled only by CSS.
 
+The owner requested the exact footer credit “portrait by jolly schwarz”, linked to https://jollyschwarz.com/ and placed below the design credit. This wording is retained in all three language editions and marked as English.
+
 The owner subsequently approved these changes to all three skills lists: remove the ten-years experience entry, combine HTML/CSS/JavaScript as “HTML / CSS / JS”, replace the software group's APIs/backend entry with VHDL, and combine MariaDB/MySQL as “MariaDB / MySQL”.
 
 The owner subsequently supplied a profile reference and approved its title, “Systems Architect & DevOps Engineer”, and its description about software platforms, infrastructure, data-driven solutions, Linux systems, data analysis and production operations. The name in the reference is replaced with Philipp Klinz. No past-project material has been supplied yet.

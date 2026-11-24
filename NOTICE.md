@@ -10,7 +10,7 @@ Pinned revision: `4301cfc75e7732550bc9d078cee5edeae49ce8d6`.
 
 ## Portrait
 
-`assets/philipp-klinz.jpg` is the unmodified `jupp-.jpg` supplied by the site owner for this personal website. The photographer and any separate reuse licence have not been supplied. This image is **not included in the website source-code licence**. Publication here does not grant permission to reuse it elsewhere.
+`assets/philipp-klinz.jpg` is the unmodified `jupp-.jpg` supplied by the site owner for this personal website. The owner identified the photographer as [Jolly Schwarz](https://jollyschwarz.com/). No separate reuse licence has been supplied. This image is **not included in the website source-code licence**. Publication here does not grant permission to reuse it elsewhere.
 
 ## Books
 
