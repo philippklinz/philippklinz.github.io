@@ -15,5 +15,6 @@
     {"title": "Technologie marketingu cyfrowego", "items": ["SEO", "E-mail marketing", "Realizacja kampanii", "Projekty dla agencji i klientów", "Śledzenie i analiza"]},
     {"title": "Pośrednictwo w obrocie danymi i bazami adresowymi", "items": ["Marketing oparty na danych", "Pozyskiwanie i przetwarzanie baz adresowych", "Segmentacja i dobór grup docelowych", "Jakość danych i zgodność z przepisami"]}
   ]},
+  "legal": {"title": "Informacje prawne", "disclosure": "Informacja zgodnie z § 25 ust. 5 austriackiej ustawy o mediach (MedienG).", "owner": "Właściciel medium", "residence": "Miejsce zamieszkania", "place": "Wiedeń, 17. dzielnica, Austria", "email": "E-mail", "scope": "Prywatna strona niekomercyjna. Zapytania dotyczące projektów wyłącznie za pośrednictwem mojego pracodawcy."},
   "books": {"title": "Trzy ulubione książki"}
 }

@@ -15,5 +15,6 @@
     {"title": "Digital Marketing Technology", "items": ["SEO", "Email marketing", "Campaign implementation", "Agency & client projects", "Tracking & analysis"]},
     {"title": "Data & List Broking", "items": ["Data-driven marketing", "List acquisition & processing", "Segmentation & targeting", "Data quality & compliance"]}
   ]},
+  "legal": {"title": "Legal notice", "disclosure": "Disclosure under § 25(5) of the Austrian Media Act (MedienG).", "owner": "Media owner", "residence": "Place of residence", "place": "Vienna, 17th district, Austria", "email": "Email", "scope": "Private, non-commercial website. Project enquiries are handled exclusively through my employer."},
   "books": {"title": "Three favourite books"}
 }

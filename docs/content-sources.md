@@ -4,6 +4,16 @@ The owner supplied a screenshot headed “What I work with” and a portrait nam
 
 The owner requested the exact footer credit “portrait by jolly schwarz”, linked to https://jollyschwarz.com/ and placed below the design credit. This wording is retained in all three language editions and marked as English.
 
+## Legal notice and contact
+
+The owner explicitly confirmed that the website has no commercial use and requested a small disclosure under § 25(5) of the Austrian Media Act, naming Philipp Klinz and Vienna's 17th district as the place of residence. The supplied contact mailbox uses the local part `webdiarrhea` (without a hyphen) at the site's domain. The address and mail link are assembled in JavaScript from an encoded value; a readable `[at]` / `[dot]` fallback remains available without scripts. This deters simple harvesting only, not crawlers that decode the value or execute JavaScript.
+
+Checked on 2026-11-24: [§ 25 MedienG](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000719&Paragraf=25), [WKO guidance](https://www.wko.at/internetrecht/informationspflichten-nach-dem-mediengesetz-fuer-websites), and [oesterreich.gv.at guidance](https://www.oesterreich.gv.at/de/themen/onlinesicherheit_internet_und_neue_medien/internet_und_handy___sicher_durch_die_digitale_welt/Seite.1720902). The small disclosure covers personal presentation; commercial use can trigger further requirements under the ECG. The WKO defines residence here as the municipality, distinct from a full postal address.
+
+The owner also explicitly stated that project enquiries must go exclusively through their employer. The legal notice identifies the website as private and non-commercial and repeats this restriction in all three languages. No employer name or contact was supplied or invented.
+
+## Skills and profile
+
 The owner subsequently approved these changes to all three skills lists: remove the ten-years experience entry, combine HTML/CSS/JavaScript as “HTML / CSS / JS”, replace the software group's APIs/backend entry with VHDL, and combine MariaDB/MySQL as “MariaDB / MySQL”.
 
 The owner subsequently supplied a profile reference and approved its title, “Systems Architect & DevOps Engineer”, and its description about software platforms, infrastructure, data-driven solutions, Linux systems, data analysis and production operations. The name in the reference is replaced with Philipp Klinz. No past-project material has been supplied yet.

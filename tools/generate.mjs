@@ -46,6 +46,8 @@ for (const book of books) {
   }
 }
 const pageVersion = hash(JSON.stringify({ config, catalogue, books, versionedAssets }) + await readFile(fileURLToPath(import.meta.url), 'utf8'));
+const contact = { user: 'webdiarrhea', host: 'philipp-klinz.net' };
+const encodedEmail = Buffer.from(`${contact.user}@${contact.host}`).toString('base64');
 const route = lang => lang === 'en' ? 'index.html' : `${lang}/index.html`;
 const icon = (paths, cls = '') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
 const icons = [
@@ -126,7 +128,7 @@ function page(lang, nativeName) {
     <div class="skills-grid">${t.skills.groups.map((group, i) => `<article class="skill"><div class="skill-heading">${icon(icons[i], 'skill-icon')}<h3>${esc(group.title)}</h3></div><ul>${group.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul></article>`).join('\n')}</div>
   </section>
 </main>
-<footer class="container footer"><p><a href="https://philippklinz.github.io/modern-objectivity-style/?lang=${lang}">${esc(t.ui.design)}</a><br><a href="https://jollyschwarz.com/" lang="en">${esc(t.ui.portraitCredit)}</a></p><nav class="footer-links" aria-label="${esc(t.ui.navigation)}"><a href="#top">${esc(t.ui.top)}</a></nav></footer>
+<footer class="container footer"><div class="footer-info"><p><a href="https://philippklinz.github.io/modern-objectivity-style/?lang=${lang}">${esc(t.ui.design)}</a><br><a href="https://jollyschwarz.com/" lang="en">${esc(t.ui.portraitCredit)}</a></p><details id="imprint" class="legal-notice"><summary>${esc(t.legal.title)}</summary><div class="legal-copy"><p>${esc(t.legal.disclosure)}</p><p>${esc(t.legal.owner)}: Philipp Klinz<br>${esc(t.legal.residence)}: ${esc(t.legal.place)}<br>${esc(t.legal.email)}: <span data-email="${encodedEmail}">${esc(contact.user)} [at] ${esc(contact.host.replaceAll('.', ' [dot] '))}</span></p><p>${esc(t.legal.scope)}</p></div></details></div><nav class="footer-links" aria-label="${esc(t.ui.navigation)}"><a href="#top">${esc(t.ui.top)}</a></nav></footer>
 <script src="${prefix + versionedAssets['assets/site.js']}" defer></script>
 </body>
 </html>

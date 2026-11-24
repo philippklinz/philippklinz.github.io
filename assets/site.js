@@ -1,5 +1,13 @@
 (() => {
   'use strict';
+  // Deter simple address harvesters while retaining a readable no-JS fallback.
+  document.querySelectorAll('[data-email]').forEach(element => {
+    const address = atob(element.dataset.email);
+    const link = document.createElement('a');
+    link.href = `mailto:${address}`;
+    link.textContent = address;
+    element.replaceChildren(link);
+  });
   const root = document.documentElement;
   const theme = document.querySelector('#theme');
   if (theme) {

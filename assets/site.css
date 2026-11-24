@@ -78,6 +78,12 @@ button, summary, a { touch-action: manipulation; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; font-size: .875rem; }
 .footer a { padding-block: .35rem; color: var(--mo-muted); text-decoration-color: var(--mo-border-strong); }
 .footer a:hover { color: var(--mo-accent); }
+.footer-info { min-width: 0; }
+.legal-notice { margin-top: .75rem; max-width: 42rem; font-size: .875rem; color: var(--mo-muted); }
+.legal-notice summary { cursor: pointer; padding-block: .35rem; }
+.legal-notice summary:hover { color: var(--mo-accent); }
+.legal-copy { padding-block: .5rem; display: grid; gap: .5rem; }
+.legal-copy p { overflow-wrap: anywhere; }
 .not-found { padding-block: 4rem; }
 .not-found article { border-top: 1px solid var(--mo-border); padding-block: 2rem; max-width: 70ch; }
 .not-found h2 { font-size: 1.75rem; }

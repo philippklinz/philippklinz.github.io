@@ -15,5 +15,6 @@
     {"title": "Technologie für digitales Marketing", "items": ["SEO", "E-Mail-Marketing", "Kampagnenumsetzung", "Agentur- & Kundenprojekte", "Tracking & Analyse"]},
     {"title": "Daten- & Adresshandel", "items": ["Datenbasiertes Marketing", "Adressbeschaffung & Verarbeitung", "Segmentierung & Zielgruppenauswahl", "Datenqualität & Compliance"]}
   ]},
+  "legal": {"title": "Impressum", "disclosure": "Offenlegung gemäß § 25 Abs. 5 MedienG.", "owner": "Medieninhaber", "residence": "Wohnort", "place": "Wien, 17. Bezirk, Österreich", "email": "E-Mail", "scope": "Private, nicht kommerzielle Website. Projektanfragen ausschließlich über meinen Arbeitgeber."},
   "books": {"title": "Drei Lieblingsbücher"}
 }
