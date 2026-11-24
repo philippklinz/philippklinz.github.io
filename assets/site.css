@@ -49,8 +49,16 @@ button, summary, a { touch-action: manipulation; }
 .hero.is-enhanced .hero-panel.is-active { animation: panel-enter .16s ease-out; }
 .interest-question { color: #f1f8f7; font-size: clamp(1.75rem, 2.8vw, 2.625rem); line-height: 1.2; letter-spacing: -.025em; font-weight: 700; margin: 0 0 1.5rem; max-width: 24ch; }
 @keyframes panel-enter { from { opacity: 0; } to { opacity: 1; } }
-.hero-portrait { margin: 0; align-self: stretch; display: flex; background: #262628; }
+.hero-portrait { margin: 0; align-self: stretch; display: flex; position: relative; overflow: hidden; background: #262628; }
 .hero-portrait img { width: 100%; height: 100%; aspect-ratio: 1; object-fit: cover; display: block; filter: grayscale(1); }
+.portrait-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; filter: grayscale(1); pointer-events: none; }
+.portrait-toggle { position: absolute; z-index: 2; right: .75rem; bottom: .75rem; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; border: 1px solid #b5ced044; border-radius: var(--mo-radius-sm); background: #0b1d20b3; color: #e0eeee; cursor: pointer; opacity: .72; }
+.portrait-toggle[hidden] { display: none; }
+.portrait-toggle:hover, .portrait-toggle:focus-visible { opacity: 1; }
+.portrait-toggle svg { width: 1.1rem; height: 1.1rem; }
+.portrait-toggle .portrait-play-icon, .portrait-toggle[data-paused="true"] .portrait-pause-icon { display: none; }
+.portrait-toggle[data-paused="true"] .portrait-play-icon { display: block; }
+@media (prefers-reduced-motion: reduce) { .portrait-canvas, .portrait-toggle { display: none; } }
 .hero:not(.is-enhanced) .hero-portrait { align-self: start; }
 .section { padding-block: clamp(4rem, 6.5vw, 7rem); }
 .section-head { display: grid; grid-template-columns: 1fr 1fr; column-gap: 5rem; align-items: center; margin-bottom: 4rem; }

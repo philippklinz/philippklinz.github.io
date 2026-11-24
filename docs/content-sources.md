@@ -4,6 +4,8 @@ The owner supplied a screenshot headed “What I work with” and a portrait nam
 
 The owner requested a portrait credit linked to https://jollyschwarz.com/, with proper capitalisation and translated wording: “Portrait by Jolly Schwarz” in English, “Porträt von Jolly Schwarz” in German and “Portret autorstwa Jolly Schwarz” in Polish. Both the design credit and portrait credit are placed inside the expandable legal notice.
 
+The owner subsequently requested a subtle living portrait inspired by the brief movements in magical newspaper photographs: small head movements and breathing with quiet pauses. The first version uses the unmodified photograph on a shallow surface rendered locally with Three.js. It does not add blinking, speech or a fully reconstructed head.
+
 ## Legal notice and contact
 
 The owner explicitly confirmed that the website has no commercial use and requested a small disclosure under § 25(5) of the Austrian Media Act, naming Philipp Klinz and Vienna's 17th district as the place of residence. The supplied contact mailbox uses the local part `webdiarrhea` (without a hyphen) at the site's domain. The address and mail link are assembled in JavaScript from an encoded value; a readable `[at]` / `[dot]` fallback remains available without scripts. This deters simple harvesting only, not crawlers that decode the value or execute JavaScript.

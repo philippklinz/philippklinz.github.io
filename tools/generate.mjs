@@ -7,11 +7,11 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const checkOnly = process.argv.includes('--check');
 const hash = content => createHash('sha256').update(content).digest('hex').slice(0, 16);
 // Keep each published asset filename immutable so cached HTML stays compatible.
-const assetFiles = ['assets/site.css', 'assets/site.js', 'assets/theme.js'];
+const assetFiles = ['assets/site.css', 'assets/site.js', 'assets/theme.js', 'assets/portrait.mjs'];
 const versionedAssets = {};
 for (const path of assetFiles) {
   const content = await readFile(root + path, 'utf8');
-  const versionedPath = path.replace(/\.(css|js)$/, `.${hash(content)}.$1`);
+  const versionedPath = path.replace(/\.(css|js|mjs)$/, `.${hash(content)}.$1`);
   versionedAssets[path] = versionedPath;
   await output(versionedPath, content);
 }
@@ -121,7 +121,7 @@ function page(lang, nativeName) {
         <section id="interests" class="hero-panel" aria-labelledby="interests-title"><h2 id="interests-title">${esc(t.interests.title)}</h2><p class="interest-question">${esc(t.interests.question)}</p><p class="interest-description">${esc(t.interests.description)}</p></section>
       </div>
     </div>
-    <figure class="hero-portrait"><img src="${prefix}assets/philipp-klinz.jpg" alt="${esc(t.ui.portrait)}" width="1024" height="1024" fetchpriority="high" decoding="async"></figure>
+    <figure class="hero-portrait" data-living-portrait><img src="${prefix}assets/philipp-klinz.jpg" alt="${esc(t.ui.portrait)}" width="1024" height="1024" fetchpriority="high" decoding="async"><button class="portrait-toggle" type="button" hidden aria-label="${esc(t.ui.portraitPause)}" data-pause-label="${esc(t.ui.portraitPause)}" data-play-label="${esc(t.ui.portraitPlay)}">${icon('<path d="M9 6v12M15 6v12"/>', 'portrait-pause-icon')}${icon('<path d="m8 5 10 7-10 7Z"/>', 'portrait-play-icon')}</button></figure>
   </section>
   <section id="skills" class="container section" aria-labelledby="skills-title">
     <div class="section-head"><div><span class="eyebrow">${esc(t.skills.label)}</span><h2 id="skills-title">${esc(t.skills.title)}</h2><span class="heading-rule" aria-hidden="true"></span></div><p>${esc(t.skills.intro)}</p></div>
@@ -138,6 +138,7 @@ function page(lang, nativeName) {
   <nav class="footer-links" aria-label="${esc(t.ui.navigation)}"><a href="#top">${esc(t.ui.top)}</a></nav>
 </footer>
 <script src="${prefix + versionedAssets['assets/site.js']}" defer></script>
+<script type="module" src="${prefix + versionedAssets['assets/portrait.mjs']}"></script>
 </body>
 </html>
 `;

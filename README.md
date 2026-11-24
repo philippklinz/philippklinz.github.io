@@ -2,7 +2,7 @@
 
 Personal website for **Philipp Klinz**, hosted through GitHub Pages. The canonical address is **https://philipp-klinz.net/**.
 
-The header has three manually selected panels: the approved professional introduction, three confirmed favourite books, and the owner's question and interests. The supplied portrait stays in place and is displayed in greyscale with CSS. The ten skills groups follow the owner's reference image. Past projects will be added separately when the owner provides their content.
+The header has three manually selected panels: the approved professional introduction, three confirmed favourite books, and the owner's question and interests. The supplied portrait is displayed in greyscale with CSS. A locally rendered Three.js surface adds a very small head movement and breathing gesture for 4.6 seconds every 15 seconds, with the background and frame edges held still. The ten skills groups follow the owner's reference image. Past projects will be added separately when the owner provides their content.
 
 ## Languages
 
@@ -10,7 +10,9 @@ The header has three manually selected panels: the approved professional introdu
 - German: `de/index.html`
 - Polish: `pl/index.html`
 
-Each version is a complete static HTML document. Reading, navigation and language selection work without JavaScript; all three header panels are then shown in sequence. JavaScript enables the manual tabs and optional appearance switch, and preserves the selected panel and current section when changing language. Tabs support arrow keys, Home and End, with no automatic rotation. The selected panel is recorded in the URL; the appearance preference is stored locally if the browser allows it. The site contains no analytics, cookies, remote translation service or third-party runtime.
+Each version is a complete static HTML document. Reading, navigation and language selection work without JavaScript; all three header panels are then shown in sequence. JavaScript enables the manual tabs and optional appearance switch, and preserves the selected panel and current section when changing language. Tabs support arrow keys, Home and End, with no automatic rotation. The selected panel is recorded in the URL; appearance and portrait-pause preferences are stored locally if the browser allows it. The site contains no analytics, cookies, remote translation service or external runtime service. Three.js and all other assets are served locally.
+
+The living portrait uses the original photograph on a shallow, hand-aligned mesh rather than a reconstructed full head. Its pause control is translated. It keeps the static image when reduced motion is requested or WebGL is unavailable, stops drawing while offscreen or the tab is hidden, and sleeps between gestures. `assets/portrait.mjs` contains the geometry weights and timing. The original JPEG remains untouched.
 
 The owner explicitly limited this website to these three languages. This is a partial adoption of Modern Objectivity's MO-13 language baseline; it does not claim complete coverage of all 24 EU languages. Book titles and links follow the chosen edition in `content/books.json`, with matching language attributes. The owner prefers an English edition when no Polish edition is available. All surrounding text and accessibility labels are translated. German and Polish translations are AI-assisted; independent language review is pending.
 
@@ -23,6 +25,7 @@ node tools/generate.mjs
 node tools/generate.mjs --check
 node --check assets/site.js
 node --check assets/theme.js
+node --check assets/portrait.mjs
 python3 tools/check_html.py
 ```
 

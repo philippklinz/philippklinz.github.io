@@ -2,7 +2,7 @@
 
 ## Website source
 
-The website source code, styles, templates and localised text are distributed under **GNU GPL version 2 only**, as provided in `LICENSE`, except for the portrait and font software described below. The local Modern Objectivity reference stylesheet retains its original GPL-2.0-only notice.
+The website source code, styles, templates and localised text are distributed under **GNU GPL version 2 only**, as provided in `LICENSE`, except for the portrait, font software and vendored Three.js files described below. The local Modern Objectivity reference stylesheet retains its original GPL-2.0-only notice.
 
 Upstream: https://github.com/philippklinz/modern-objectivity-style
 
@@ -14,7 +14,11 @@ Pinned revision: `4301cfc75e7732550bc9d078cee5edeae49ce8d6`.
 
 ## Books
 
-Book titles and author names identify the owner's favourite books. Product pages are linked; no cover images, shop descriptions, reviews or affiliate tracking have been copied into the website. The German editions' bibliographic titles are intentionally preserved in every language.
+Book titles and author names identify the owner's favourite books. Product pages are linked; no cover images, shop descriptions, reviews or affiliate tracking have been copied into the website. Editions and links follow the selected language as documented in `docs/content-sources.md`.
+
+## Three.js
+
+`assets/vendor/three-r180/` contains the unmodified `three.module.min.js` and `three.core.min.js` builds from [Three.js r180](https://github.com/mrdoob/three.js/tree/r180), version 0.180.0, and the upstream MIT licence in `LICENSE`. They are loaded locally for the optional living-portrait effect. No external rendering or image-processing service receives the photograph.
 
 ## Font software
 
