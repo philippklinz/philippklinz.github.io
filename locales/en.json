@@ -1,0 +1,18 @@
+{
+  "meta": {"title": "Philipp Klinz — Skills & interests", "description": "Philipp Klinz: systems architecture, software engineering, infrastructure, data and digital marketing. Skills and favourite books."},
+  "ui": {"skip": "Skip to content", "navigation": "Main navigation", "skills": "Skills", "books": "Books", "language": "Language", "dark": "Dark appearance", "portrait": "Portrait of Philipp Klinz", "top": "Back to top", "source": "Website source", "design": "Designed with Modern Objectivity.", "notFound": "Page not found", "notFoundText": "This address does not lead to a page. Choose a language to return to the website.", "home": "Go to the website"},
+  "header": {"fields": "Systems · Software · Data"},
+  "skills": {"label": "Skills", "title": "What I work with", "intro": "A broad technical skill set built over many years — from software engineering and data analysis to server infrastructure and production operations.", "groups": [
+    {"title": "Systems Architecture", "items": ["System design", "Infrastructure architecture", "Integration & interfaces", "Scalability & high availability", "Technical consulting"]},
+    {"title": "Infrastructure & DevOps", "items": ["Linux", "Proxmox & virtualisation", "Automation with Bash & Python", "Monitoring & alerting", "Deployment & operations", "Backup & disaster recovery"]},
+    {"title": "Server Infrastructure", "items": ["Planning & requirements", "Hardware selection & procurement", "Physical setup & installation", "Configuration & integration", "Maintenance & expansion"]},
+    {"title": "Software Engineering", "items": ["PHP", "Python", "JavaScript", "Bash", "HTML & CSS", "APIs & backend systems"]},
+    {"title": "Databases & Data Engineering", "items": ["PostgreSQL", "MySQL", "MariaDB", "Database design & administration", "Data import & processing", "ETL & data transformation"]},
+    {"title": "Data Analysis & Statistics", "items": ["Data analysis", "Statistical analysis", "Data interpretation", "Data cleansing & transformation", "Reporting & visualisation", "SQL & Python based analysis"]},
+    {"title": "Web Engineering", "items": ["Web applications", "Backend systems", "Frontend integration", "REST APIs", "Performance optimisation"]},
+    {"title": "Email Engineering", "items": ["Email delivery solutions", "HTML email templates", "Client compatibility", "Deliverability & optimisation", "Email marketing infrastructure"]},
+    {"title": "Digital Marketing Technology", "items": ["SEO", "Email marketing", "Campaign implementation", "Agency & client projects", "Tracking & analysis"]},
+    {"title": "Data & List Broking", "items": ["10 years professional experience", "Data-driven marketing", "List acquisition & processing", "Segmentation & targeting", "Data quality & compliance"]}
+  ]},
+  "books": {"label": "A little more personal", "title": "Three favourite books", "edition": "Links lead to German-language editions at Thalia.", "link": "View at Thalia"}
+}
