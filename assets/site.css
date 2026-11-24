@@ -32,7 +32,7 @@ button, summary, a { touch-action: manipulation; }
 .hero-text { min-width: 0; padding: clamp(2rem, 3.5vw, 3.5rem); display: grid; grid-template-rows: 1fr auto; gap: 2rem; }
 .hero h1 { font-size: clamp(2.75rem, 5vw, 5.5rem); line-height: 1.02; letter-spacing: -.055em; color: #f1f8f7; font-weight: 700; margin: 0 0 1rem; }
 .hero .name-accent { color: #49d9c6; display: inline; }
-.hero-kicker { margin: 0 0 1.25rem; font: .875rem/1.5 var(--mo-mono); letter-spacing: .12em; text-transform: uppercase; color: #b5ced0; }
+.hero-kicker, .hero-panel h2 { margin: 0 0 1.25rem; font: 400 .875rem/1.5 var(--mo-mono); letter-spacing: .12em; text-transform: uppercase; color: #b5ced0; }
 .profile-role { color: #e0eeee; font-size: clamp(1.125rem, 1.8vw, 1.5rem); line-height: 1.35; font-weight: 700; margin: 0 0 1.5rem; }
 .profile-copy, .interest-description { color: #b5ced0; font-size: 1rem; line-height: 1.65; margin: 0; max-width: 54ch; }
 .hero-tabs { grid-row: 2; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; }
@@ -42,10 +42,9 @@ button, summary, a { touch-action: manipulation; }
 .hero :focus-visible { outline-color: #81d8ff !important; }
 .hero-panels { grid-row: 1; min-width: 0; align-self: center; }
 .hero-panel { min-width: 0; }
-.hero-panel h2 { color: #b5ced0; font-size: 1.125rem; line-height: 1.5; font-weight: 400; letter-spacing: 0; margin: 0 0 1.5rem; }
 .hero:not(.is-enhanced) .hero-panel + .hero-panel { margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid #2a4a52; }
 .hero.is-enhanced .hero-panels { display: grid; }
-.hero.is-enhanced .hero-panel { grid-area: 1 / 1; align-self: center; }
+.hero.is-enhanced .hero-panel { grid-area: 1 / 1; align-self: start; }
 .hero.is-enhanced .hero-panel[aria-hidden="true"] { visibility: hidden; pointer-events: none; }
 .hero.is-enhanced .hero-panel.is-active { animation: panel-enter .16s ease-out; }
 .interest-question { color: #f1f8f7; font-size: clamp(1.75rem, 2.8vw, 2.625rem); line-height: 1.2; letter-spacing: -.025em; font-weight: 700; margin: 0 0 1.5rem; max-width: 24ch; }
@@ -71,7 +70,7 @@ button, summary, a { touch-action: manipulation; }
 .book-list { display: grid; gap: 1.25rem; }
 .book { min-width: 0; }
 .book-author { color: #b5ced0; font: .875rem/1.5 var(--mo-font); margin: 0 0 .25rem; }
-.book h3 { font: 400 1.125rem/1.45 var(--mo-serif); letter-spacing: 0; margin: 0; overflow-wrap: anywhere; }
+.book h3 { font: 400 1.125rem/1.5 var(--mo-font); letter-spacing: 0; margin: 0; overflow-wrap: anywhere; }
 .book a { color: #d4e4e5; text-decoration-color: #55777c; text-underline-offset: .2em; }
 .book a:hover { color: #79e8d7; text-decoration-color: currentColor; }
 .footer { padding-block: 1.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; }
