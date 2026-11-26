@@ -2,6 +2,8 @@
 
 Personal website for **Philipp Klinz**, hosted through GitHub Pages. The canonical address is **https://philipp-klinz.net/**.
 
+This is the **`weyland-yutani` redesign branch**. `main` preserves the current personal site. The planned Babylon.js version uses a terminal loading screen, an orbital scene and the existing content as an HTML/CSS HUD. It remains static by design, with local browser-ready dependencies and no required website build pipeline. The [Blender spacecraft brief](docs/briefs/blender-spacecraft.md) defines the separate model handoff. The existing implementation described below remains in place until the redesign is built.
+
 The header has three manually selected panels: the approved professional introduction, three confirmed favourite books, and the owner's question and interests. The supplied portrait is displayed in greyscale with CSS. A locally rendered Three.js surface adds a head movement and breathing gesture for 4.6 seconds every 8 seconds, separated by 3.4 seconds of stillness, with the background and frame edges held still. The ten skills groups follow the owner's reference image. Past projects will be added separately when the owner provides their content.
 
 ## Languages
@@ -39,7 +41,7 @@ The generator also publishes content-hashed copies of the site CSS and JavaScrip
 
 Repository: [philippklinz/philippklinz.github.io](https://github.com/philippklinz/philippklinz.github.io).
 
-Use **Settings → Pages → Deploy from a branch → main → /(root)**. `.nojekyll` makes the publication a direct static site. `CNAME`, canonical URLs, language alternates, Open Graph URLs and the sitemap all use `https://philipp-klinz.net/`.
+To publish the redesign branch, the owner selects **Settings → Pages → Deploy from a branch → weyland-yutani → /(root)**. Selecting `main` restores the preserved version. `.nojekyll` makes the publication a direct static site. `CNAME`, canonical URLs, language alternates, Open Graph URLs and the sitemap all use `https://philipp-klinz.net/`.
 
 Set `philipp-klinz.net` as the custom domain in GitHub Pages and configure the domain's DNS to point to GitHub Pages. Preserve the checked-in `CNAME` file. The site is already configured for this canonical domain; `siteURL` in `site.config.json` is the shared URL setting if it changes later. See [GitHub's custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). A custom domain on this user site also becomes the default domain for the account's project Pages sites unless they have their own domains.
 

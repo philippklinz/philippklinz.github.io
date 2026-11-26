@@ -1,5 +1,16 @@
 # Website working instructions
 
+## Active redesign branch
+
+- The owner selected **`weyland-yutani`** for the new Babylon.js orbital website. Work and publish commits for this redesign only on that branch. Preserve `main` as the existing website; do not merge into it or change Pages settings on the owner's behalf.
+- The approved direction is a terminal loading screen, an orbital view with a stormy planet and a slowly passing spacecraft, and the existing content as an HTML/CSS HUD. Use Modern Objectivity with the requested Weyland-Yutani-inspired future corporate setting. Specific earlier terminal labels remain design ideas, not approved replacement copy.
+- Keep rendering settings and local automatic quality selection in scope. Structure the runtime so later scenes or a ship interior can be added; building an interior is not part of the first version.
+- **Static by design:** deploy and run checked-in HTML/CSS/JS/assets directly, with browser-ready Babylon/loader files hosted locally. No npm install, bundler, transpiler, runtime service or required website build pipeline. Offline asset authoring/export is allowed; deliver the resulting GLBs and textures as static files.
+- The planet and browser effects belong to the website work. The spacecraft asset brief is `docs/briefs/blender-spacecraft.md`; a separate Blender agent will receive it from the owner. Keep asset handoff paths separate from site implementation.
+- The header/Three.js portrait rules below describe the preserved `main` baseline. They do not require carrying that layout or renderer into the approved Babylon redesign. Preserve the approved content, languages, credits, legal notice, local assets and accessibility behaviour when implementing its replacement.
+
+## Existing website baseline and shared requirements
+
 - This repository is Philipp Klinz's personal website. Use plain static HTML, CSS and JavaScript. No application framework, runtime service, analytics or package dependency is needed.
 - The owner chose **English, German and Polish only**, with English as the default. Do not expand the language scope without a new request.
 - Load the vendored LiberationFontsWeb families from `assets/fonts/`. Preserve font files, Web family names, licence and upstream revision.
@@ -13,4 +24,4 @@
 - Edit `assets/site.css`, `assets/site.js`, `assets/theme.js` and `assets/portrait.mjs` as sources, then regenerate their content-hashed published copies. Keep older hashed copies for cached pages. Preserve the target page version when updating language links.
 - Keep direct relative links, correct `lang` attributes, translated accessible labels, keyboard focus, reduced-motion support and readable narrow layouts. Core content and language choice must work without JavaScript.
 - Validate with the commands in README. Inspect visual changes in a browser when available. Preserve the original portrait file; do not claim it is GPL-licensed.
-- Publish to `main` in this repository when requested. Do not publish this website into one of the laboratory repositories. Custom-domain activation is a separate hosting/DNS step.
+- Publish redesign work to `weyland-yutani` only. Do not publish this website into one of the laboratory repositories. The owner handles switching the GitHub Pages source branch; custom-domain activation is a separate hosting/DNS step.
